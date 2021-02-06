@@ -1,0 +1,444 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+   
+    
+    
+}
+body{
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  
+   
+}
+h2{
+    font-size: 1.8rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+p{
+    font-family: 'Forum', cursive;
+    font-size: 1.2rem;
+}
+
+[class*=col-]{
+    float: left;
+    padding: 10px;
+
+}
+[class*=col-]{
+    width: 100%;
+}
+/* navbar starts here */
+.navbar{
+    background-color: rgb(19, 108, 114);
+    padding: 1% 7%;
+    text-align: center;
+
+}
+.dotted-hr{
+    border: dotted 5px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 80px;
+
+}
+
+
+.navheading h1{
+    color:white;
+    margin: 0;
+    padding-top: 7px ;
+
+}
+
+.navlink {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.navlink a{
+    background-color: rgb(23, 78, 78);
+    border-radius: 7px;
+    padding: 5px;
+    margin: 5px;
+}
+.navlink a:hover{
+    background-color: rgb(136, 128, 136);
+}
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* nav ends here */
+/* /* <!-- profile starts here     --> */
+.profile{
+    position: relative;
+    padding: 130px 50px;
+    text-align: center;
+    margin : 20px;
+
+}
+
+.profile .anime1{
+    position: absolute;
+    right: 110px;
+    top: -10px;
+    transition: transform 4s;
+    width:200px;
+    height:200px
+        
+}
+.profile .anime1:hover{
+    transform: rotate(360deg);
+}
+.profile.details{
+    margin-top: 10px;
+}
+.profile .details h1{
+    font-family: 'Yesteryear', cursive;
+    font-size: 3rem;
+}
+.profile .details p{
+    margin: 0 auto 20px auto;
+    text-align: center;
+    color: gray;
+    width: 90%;
+    padding-bottom: 100px;
+
+
+}
+.profile .anime2{
+    position: absolute;
+    left: 110px;
+    bottom:10px;
+    transition: transform 4s;
+    margin-top: 40px;
+    width:200px; height:200px
+}
+.profile .anime2:hover{
+    transform: rotate(360deg);
+}
+
+.profile::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+    
+/* <!-- profile ends here --> */ 
+/* about me starts here  */
+.about-me{
+    background-color: rgb(9, 139, 133);
+    color: white;
+    font-family: 'Forum', cursive;
+    padding: 1% 7%;
+    text-align: center;
+  
+}
+.about-me-image img {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 120px;
+    height: 150px;
+    
+   
+}
+.about-me-det{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.about-me-det a{
+    font-size: 1.2rem;
+    font-family:'Forum', cursive ;
+    cursor:-moz-grab;
+}
+.about-me::after{
+    clear: both;
+    display:table;
+    content: "";
+}
+
+/* about me ends here  */
+/* <!-- personal experience starts here --> */
+.personal-experience{
+
+padding: 1% 1%;
+
+}
+
+.card{
+   
+    height: 1100px;
+    padding: 10px 20px;
+    color: white;
+    margin: 2px;
+    background-color:rgb(147, 144, 150);
+   
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.card-title h2{
+    background-color: rgb(116, 119, 124);
+    padding: 7px;
+    
+    border-radius: 5px;
+}
+.card:hover{
+    box-shadow: 0px 4px 5px 8px black;
+}
+.card-icon{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-icon img{
+    
+    width: 100px;
+
+}
+.card-icon .rounded-img{
+    border: white solid 2px;
+    border-radius: 50%;
+    padding: 15px;
+}
+.per-hr{
+    border: solid white 2px;
+    border-bottom:none; 
+    text-align: center;
+    border-bottom: none;
+}
+
+/* skills starts here */
+.card-title h2{
+    font-size: 2.5rem;
+}
+
+
+.skills-container{
+    padding-right: 45px;
+}
+.skills-container li{
+    font-weight: bold;
+    font-size: 1.5rem;
+    list-style: none;
+    width: 100%;
+    margin: 45px 10px;
+    text-transform: uppercase ;
+    position: relative;
+
+}
+.skill .skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;  
+    width: 100%;
+    height: 10px;
+    background-color: rgb(57, 46, 133,.5);
+    border-radius: 1000px;
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;  
+    width: 0;
+    height: 10px;
+    background-color: rgb(57, 46, 133,1);
+    border-radius: 1000px;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skills-container li.html::after{
+    animation-name: html;
+}
+@keyframes html {
+    to {
+        width: 90%;
+    }
+}
+.skills-container li.css:after{
+    animation-name:css;
+}
+@keyframes css{
+    to {
+        width: 80%;
+        /* background-color: rgb(18, 46, 46); */
+    }
+}
+.skills-container li.javascript::after{
+    animation-name :javascript;
+    
+}
+@keyframes javascript{
+    to{
+        width: 60%;
+    }
+}
+.skills-container li.jquery::after {
+    animation-name:jquery;
+}
+@keyframes jquery{
+    to{
+        width:45%;
+    }
+}
+.skills-container li.bootstrap::after {
+    animation-name:bootstrap;
+}
+@keyframes bootstrap{
+    to{
+        width:45%;
+    }
+}
+.skills-container li.python::after {
+    animation-name:python;
+}
+@keyframes python{
+    to{
+        width:80%;
+    }
+}
+.skills-container li.c::after {
+    animation-name:c;
+}
+@keyframes c{
+    to{
+        width:85%;
+    }
+}
+.skills-container li.c-plus::after {
+    animation-name:c-plus;
+}
+@keyframes c-plus{
+    to{
+        width:45%;
+    }
+}
+.skills-container li.django::after {
+    animation-name:django;
+}
+@keyframes django{
+    to{
+        width:55%;
+    }
+}
+
+.personal-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* skills ends here */
+    
+/* <!-- personal experience ends here --> */
+/* /* contact and awards starts here */
+
+.contacts-achievements{
+    background-color: rgb(14, 14, 102);
+    color: white;
+    padding: 1% 1%;
+    height: 1200px;
+}
+.contacts-achievements .ark p{
+    text-align: center;
+    
+}
+.contact{
+    text-align: center;
+
+}
+.contact input,textarea
+{
+
+    transition: width 0.3s ease-in-out; 
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    resize: none;
+}
+.contact input:focus, textarea:focus{
+    width: 100%;
+}
+
+
+.contact button{
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color:#0e4b4e;
+    color: white;
+    margin: 5px;
+    padding: 15px;
+    
+
+}
+.links{
+    text-align: center;
+}
+.media-button{
+    padding-top: 30px;
+}
+.btn{
+    text-align: center;
+    width: 50px;
+    font-size: 32px;
+    padding: 5px;
+    margin: 3px;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:gray;
+}
+.contacts-achievements::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.footer{
+    background-color: black;
+    height: 150px;
+
+}
+.footer-links {
+
+    text-align: center;
+    
+}
+.footer-links a{
+    padding: 8px;
+}
+.footer-pr {
+    text-align: center;
+    color: white;
+}
+
+
+/* contact and awards ends here */
